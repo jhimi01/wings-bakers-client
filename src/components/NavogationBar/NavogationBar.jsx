@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const NavogationBar = () => {
+
+  const { user,logOut } = useContext(AuthContext);
+  console.log(user)
+
+  const handlelogOut=(e) => {
+    e.preventDefault();
+    logOut()
+    .then(() => {})
+    .catch(error => {
+      console.log(error.message);
+    })
+  };
+
     return (
         
         <div className="navbar border-b">
@@ -23,13 +38,17 @@ const NavogationBar = () => {
         {/* large page */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu text-white menu-horizontal text-xl gap-3 px-1">
-          <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/blog'>Blog</Link>
+          {/* <Navigate to='/' className={({ isActive }) => isActive ? "active" : ""}>Home</Navigate> */}
+          <NavLink to='/home' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>Home</NavLink>
+            <NavLink to='/about' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>About</NavLink>
+            <NavLink to='/blog' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>Blog</NavLink>
           </ul>
         </div>
         <div className="navbar-end">
-          <button className='bg-white py-2 px-5 text-xl flex items-center text-gray-600'>Login</button>
+         {user ? <button className='bg-white py-2 px-5 text-xl flex items-center text-gray-600' onClick={handlelogOut} >LogOut</button> : <Link to='/login'>
+         <button
+         className='bg-white py-2 px-5 text-xl flex items-center text-gray-600'>Login</button>
+         </Link>}
         </div>
         
       </div>

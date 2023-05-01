@@ -15,9 +15,9 @@ const Home = () => {
            </div>
          </div>
          <div className='absolute right-11'>
-            <FaFacebookF className='text-white mb-3 text-xl md:text-3xl'/>
-            <FaInstagram className='text-white mb-3 text-xl md:text-3xl'/>
-            <FaTwitter className='text-white text-xl md:text-3xl'/>
+            <FaFacebookF className='text-white mb-3 text-xl md:text-3xl cursor-pointer hover:text-gray-800'/>
+            <FaInstagram className='text-white mb-3 text-xl md:text-3xl cursor-pointer hover:text-gray-800'/>
+            <FaTwitter className='text-white text-xl md:text-3xl cursor-pointer hover:text-gray-800'/>
          </div>
          <About></About>
         </div>
