@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+    let navigate = useNavigate();
 
     const { logIn } = useContext(AuthContext)
 
@@ -12,6 +13,8 @@ const Login = () => {
     const [show, setShow] = useState(false);
     const [error, setError] = useState('');
     const [succes, setSucces] = useState('');
+
+    let from = location.state?.from?.pathname || "/";
 
 
     const handlelogin = (e) => {
@@ -24,6 +27,7 @@ const Login = () => {
             setEmail('')
             setPassword('')
             setError('')
+            navigate(from, { replace: true });
         }).catch(error =>{
             console.log(error.message)
             setError(error.message)

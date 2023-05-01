@@ -2,17 +2,20 @@ import  { useContext, useState } from 'react';
 import './Register.css'
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
-
-    const { createUser } = useContext(AuthContext)
+    let navigate = useNavigate();
+    const { createUser, googleSign } = useContext(AuthContext)
 
     const [name, setName] = useState('');
     const [photoUrl, setPhotoUrl] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [show, setShow] = useState(false);
+    const [error, setError] = useState('');
+    const [succes, setSucces] = useState('');
+    let from =  "/";
   
     const handleRegister = (e) => {
       e.preventDefault();
@@ -21,9 +24,27 @@ const Register = () => {
       .then(result => {
         const register = result.user;
         console.log(register)
+        setError('')
+        setSucces('succesfully registered')
       }).catch((err) => {
         console.log(err)
+        setError(err.message)
+        setSucces('')
       });
+    }
+
+
+    // Google signIn
+    const handleGooglesignIn =()=>{
+        googleSign()
+        .then(result => {
+            const googleLogin = result.user;
+            console.log(googleLogin)
+            navigate(from, { replace: true });
+            setSucces('logged in successfully'); 
+        }).catch((err) => {
+            console.log(err.message)
+        });
     }
 
     // hide / show password
@@ -61,10 +82,13 @@ const Register = () => {
           <button type="submit" className="register-button ">Register</button>
           <p className='my-4'>Do you already have an account? <Link to='/login' className='text-blue-700 underline'>Login</Link></p>
         </div>
+        {succes && <p style={{color: 'green'}}>{succes}</p>}
+        {error && <p style={{color: 'green'}}>{error}</p>}
   <p className="text-center mt-3">or</p>
   <hr className='my-3' />
         <div className="oauth-group flex flex-col gap-4">
-          <button className="oauth-button flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with Google <FaGoogle></FaGoogle></button>
+          <button onClick={handleGooglesignIn} className="oauth-button flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with Google <FaGoogle></FaGoogle></button>
+
           <button className="oauth-button  flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with GitHub <FaGithub></FaGithub></button>
         </div>
       </form>
