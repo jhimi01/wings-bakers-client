@@ -26,6 +26,7 @@ const Register = () => {
         console.log(register)
         setError('')
         setSucces('succesfully registered')
+        navigate('/login')
       }).catch((err) => {
         console.log(err)
         setError(err.message)
