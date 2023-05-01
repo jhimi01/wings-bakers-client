@@ -1,14 +1,17 @@
 .banner{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
    position: relative;
+   margin-top: -70px;
+   z-index: -2;
 }
 
 .banner .overLay{
     /* position: absolute; */
     /* width: 50%; */
-     background-color: rgba(0, 0, 0, 0.664);
+     background-color: rgba(0, 0, 0, 0.705);
      z-index: 999;
      margin: auto 0;
+     padding: 20px;
 }
 
