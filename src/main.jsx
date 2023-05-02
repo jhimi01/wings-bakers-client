@@ -13,6 +13,7 @@ import Login from './page/Login/Login';
 import Register from './page/Register/Register';
 import Blog from './page/Blog/Blog';
 import Main from './Main/Main';
+import ViewRecipe from './page/ViewRecipe/ViewRecipe';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       ,{
         path: '/blog',
         element: <Blog></Blog>
+      },{
+        path: '/chefs/:id',
+        element: <ViewRecipe></ViewRecipe>,
+        loader: (({ params }) => fetch('http://localhost:5000/chefs'))
       }
     ]
   },

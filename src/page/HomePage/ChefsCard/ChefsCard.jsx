@@ -10,7 +10,7 @@ const ChefsCard = () => {
       .then((data) => setChefs(data));
   }, []);
 
-  console.log(chefs.map((chef) => chef.chef_picture));
+  // console.log(chefs.map((chef) => chef.chef_picture));
 
   return (
     <div className="md:p-28 py-20 px-2">
