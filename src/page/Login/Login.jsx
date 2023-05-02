@@ -39,7 +39,7 @@ const Login = () => {
             const googleLogin = result.user;
             console.log(googleLogin)
             setSucces('logged in successfully'); 
-            navigate(from);
+            navigate(from, { replace: true });
         }).catch((err) => {
             console.log(err.message)
         });
@@ -51,7 +51,7 @@ const Login = () => {
         const githubLogin = result.user;
         console.log(githubLogin)
         setSucces('logged in successfully'); 
-        navigate(from);
+        navigate(from, { replace: true });
     }).catch((err) => {
         console.log(err.message)
     });
