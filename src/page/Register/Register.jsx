@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     let navigate = useNavigate();
-    const { createUser, googleSign } = useContext(AuthContext)
+    const { createUser, googleSign, githubSign } = useContext(AuthContext)
 
     const [name, setName] = useState('');
     const [photoUrl, setPhotoUrl] = useState('');
@@ -47,6 +47,21 @@ const Register = () => {
             console.log(err.message)
         });
     }
+
+
+    const handleGithubsignIn =()=>{
+      githubSign()
+      .then(result => {
+        const githubLogin = result.user;
+        console.log(githubLogin)
+        setSucces('logged in successfully'); 
+        navigate(from);
+    }).catch((err) => {
+        console.log(err.message)
+    });
+    }
+
+
 
     // hide / show password
     const handleshowpass=()=>{
@@ -90,7 +105,7 @@ const Register = () => {
         <div className="oauth-group flex flex-col gap-4">
           <button onClick={handleGooglesignIn} className="oauth-button flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with Google <FaGoogle></FaGoogle></button>
 
-          <button className="oauth-button  flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with GitHub <FaGithub></FaGithub></button>
+          <button onClick={handleGithubsignIn} className="oauth-button  flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with GitHub <FaGithub></FaGithub></button>
         </div>
       </form>
     );

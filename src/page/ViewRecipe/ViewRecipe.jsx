@@ -13,20 +13,20 @@ const ViewRecipe = () => {
 
     return (
         <>
-            <div className='grid bg-slate-600 md:grid-cols-2 grid-cols-1 gap-6 p-9 mt-3'>
+            <div className='grid bg-slate-600 md:grid-cols-2 grid-cols-1 gap-6 px-9 mt-3'>
             <div className='w-full overflow-hidden'>
                 <figure>
                     <img src={chef_picture} alt="chef picture" />
                 </figure>
             </div>     
-            <div className='chefs-details  text-orange-50'>
-                 <h1 className='md:text-5xl text-xl font-bold text-center border-y md:py-4 py-2 md:mt-0 my-2'>{chef_name}</h1>
-                 <div  className='flex justify-center flex-col text-xl text-gray-300'>
-                 <p>Experience of: {years_of_experience} years</p>
-                 <p>Recipes: {number_of_recipes}</p>
-                 <p className='flex items-center gap-2'>Liked by : {likes} </p>
-                 <p>Specialty: {details.specialty}</p>
-                 <p>Awards: {details.awards[0]}</p>
+            <div className='text-orange-50 pb-6'>
+                 <h1 className='md:text-5xl text-xl font-bold text-center border-y md:py-4 py-2 md:my-5 my-1'>{chef_name}</h1>
+                 <div  className='flex flex-col text-xl text-gray-300'>
+                 <p className='mb-3' >Experience of: {years_of_experience} years</p>
+                 <p className='mb-3' >Recipes: {number_of_recipes}</p>
+                 <p className='flex items-center gap-2 mb-3'>Liked by : {likes} </p>
+                 <p  className='mb-3'>Specialty: {details.specialty}</p>
+                 <p  className='mb-3'>Awards: {details.awards[0]}</p>
                  </div>
                  
                 
@@ -39,9 +39,9 @@ const ViewRecipe = () => {
   <div className="card-body">
     <h2 className="card-title text-2xl font-bold">{recipe.recipe_name}!</h2>
    <ol>
-   {recipe.ingredients.map((ingred, index) => <li className='text-lg'>{index + 1}.{ingred}</li>)}
+   {recipe.ingredients.map((ingred, index) => <li className='text-lg'>{index + 1}| {ingred}</li>)}
    </ol>
-    <div className="card-actions justify-end">
+    <div className="card-actions mt-3">
     <button className='bg-gray-600 py-2 px-5 text-xl flex items-center text-white'>Favroite <FaHeart /></button>
     </div>
   </div>

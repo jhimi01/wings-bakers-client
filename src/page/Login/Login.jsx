@@ -6,8 +6,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();
     let location = useLocation();
-    const { googleSign } = useContext(AuthContext)
-    const { logIn } = useContext(AuthContext)
+    const { googleSign, githubSign, logIn } = useContext(AuthContext)
+    // const { logIn } = useContext(AuthContext)
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,8 +16,6 @@ const Login = () => {
     const [succes, setSucces] = useState('');
 
     let from = location.state?.from?.pathname || "/";
-
-
     const handlelogin = (e) => {
         e.preventDefault();
         logIn(email, password)
@@ -35,29 +33,37 @@ const Login = () => {
             setSucces('')
         })
       }
-
       const handleGooglesignIn =()=>{
         googleSign()
         .then(result => {
             const googleLogin = result.user;
             console.log(googleLogin)
-            navigate(from, { replace: true });
             setSucces('logged in successfully'); 
-            navigate(from, { replace: true });
+            navigate(from);
         }).catch((err) => {
             console.log(err.message)
         });
     }
 
+    const handleGithubsignIn =()=>{
+      githubSign()
+      .then(result => {
+        const githubLogin = result.user;
+        console.log(githubLogin)
+        setSucces('logged in successfully'); 
+        navigate(from);
+    }).catch((err) => {
+        console.log(err.message)
+    });
+    }
     
     // hide / show password
     const handleshowpass=()=>{
         setShow(!show)
     }
-  
-
     return (
-        <form className='w-1/2 mx-auto mt-5' onSubmit={handlelogin}>
+        <>
+          <form className='w-1/2 mx-auto my-5' onSubmit={handlelogin}>
         <h2 className="text-center text-3xl my-5">Please Login</h2>
            <div className="form-group">
           <label>Email:</label>
@@ -79,12 +85,13 @@ const Login = () => {
         </div>
         <div className="divider">OR</div>
   
-  <div className="oauth-group flex flex-col gap-4">
+  <div className="oauth-group my-5 flex flex-col gap-4">
     <button onClick={handleGooglesignIn} className="oauth-button flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with Google <FaGoogle></FaGoogle></button>
 
-    <button className="oauth-button  flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with GitHub <FaGithub></FaGithub></button>
+    <button onClick={handleGithubsignIn} className="oauth-button  flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with GitHub <FaGithub></FaGithub></button>
   </div>
         </form>
+        </>
     );
 };
 
