@@ -8,32 +8,33 @@ const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
-    // const [loader, setLoader] = useState(true);
+    const [loader, setLoader] = useState(true);
 
 
 // --------------- create user with pass emial---------------
     const createUser =(email, password)=>{
-        // setLoader(false)
+        setLoader(true)
      return  createUserWithEmailAndPassword(auth, email, password)
     }
 
 
     // ----------------------- sign in  With Google--------------------
     const googleSign =()=>{
+      setLoader(true)
         signInWithPopup(auth, provider)
     }
 
 
     // --------------------- login user--------------------------
     const logIn =(email, password)=>{
-        // setLoader(false)
+        setLoader(true)
       return signInWithEmailAndPassword(auth, email, password)
     }
 
 
     // ---------------------logout user------------------------
     const logOut = ()=>{
-        // setLoader(false)
+        setLoader(true)
         return signOut(auth)
     }
 
@@ -42,6 +43,7 @@ const AuthProvider = ({children}) => {
         const unSubscribe = 
         onAuthStateChanged(auth, loggedInUser =>{
             setUser(loggedInUser)
+            setLoader(false)
         })
         return ()=>{
             unSubscribe()
@@ -52,6 +54,7 @@ const AuthProvider = ({children}) => {
     // const user = {displayName : 'jhimi'}
   const authInfo = {
     user,
+    loader,
     createUser,
     googleSign,
     logIn,
