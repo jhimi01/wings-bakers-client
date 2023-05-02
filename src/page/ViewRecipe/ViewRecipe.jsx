@@ -37,12 +37,12 @@ const ViewRecipe = () => {
             {recipes.map(recipe => 
             <div className="card bg-slate-100 text-gray-800 p-5 card-compact w-96 shadow-xl" style={{borderRadius: 0}}>
   <div className="card-body">
-    <h2 className="card-title">{recipe.recipe_name}!</h2>
+    <h2 className="card-title text-2xl font-bold">{recipe.recipe_name}!</h2>
    <ol>
-   {recipe.ingredients.map((ingred, index) => <li>{index + 1}.{ingred}</li>)}
+   {recipe.ingredients.map((ingred, index) => <li className='text-lg'>{index + 1}.{ingred}</li>)}
    </ol>
     <div className="card-actions justify-end">
-    <button className='bg-white py-2 px-5 text-xl flex items-center text-gray-600'>Favroite <FaHeart /></button>
+    <button className='bg-gray-600 py-2 px-5 text-xl flex items-center text-white'>Favroite <FaHeart /></button>
     </div>
   </div>
 </div>)}

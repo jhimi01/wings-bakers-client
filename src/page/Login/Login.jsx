@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
+    let location = useLocation();
     const { googleSign } = useContext(AuthContext)
     const { logIn } = useContext(AuthContext)
 
@@ -42,6 +43,7 @@ const Login = () => {
             console.log(googleLogin)
             navigate(from, { replace: true });
             setSucces('logged in successfully'); 
+            navigate(from, { replace: true });
         }).catch((err) => {
             console.log(err.message)
         });
