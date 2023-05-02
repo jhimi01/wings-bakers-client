@@ -85,8 +85,8 @@ const Register = () => {
         </div>
         {succes && <p style={{color: 'green'}}>{succes}</p>}
         {error && <p style={{color: 'green'}}>{error}</p>}
-  <p className="text-center mt-3">or</p>
-  <hr className='my-3' />
+        <div className="divider">OR</div>
+  
         <div className="oauth-group flex flex-col gap-4">
           <button onClick={handleGooglesignIn} className="oauth-button flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with Google <FaGoogle></FaGoogle></button>
 

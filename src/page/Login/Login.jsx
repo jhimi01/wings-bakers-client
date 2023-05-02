@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     let navigate = useNavigate();
-
+    const { googleSign } = useContext(AuthContext)
     const { logIn } = useContext(AuthContext)
 
     const [email, setEmail] = useState('');
@@ -35,6 +35,18 @@ const Login = () => {
         })
       }
 
+      const handleGooglesignIn =()=>{
+        googleSign()
+        .then(result => {
+            const googleLogin = result.user;
+            console.log(googleLogin)
+            navigate(from, { replace: true });
+            setSucces('logged in successfully'); 
+        }).catch((err) => {
+            console.log(err.message)
+        });
+    }
+
     
     // hide / show password
     const handleshowpass=()=>{
@@ -63,6 +75,13 @@ const Login = () => {
           <button type="submit" className="login-button ">Login</button>
           <p className="my-4">Are you new here? <Link to='/register' className='text-blue-700 underline my-3'>Register</Link></p>
         </div>
+        <div className="divider">OR</div>
+  
+  <div className="oauth-group flex flex-col gap-4">
+    <button onClick={handleGooglesignIn} className="oauth-button flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with Google <FaGoogle></FaGoogle></button>
+
+    <button className="oauth-button  flex items-center justify-center gap-3 text-gray-700 font-bold">Sign in with GitHub <FaGithub></FaGithub></button>
+  </div>
         </form>
     );
 };
