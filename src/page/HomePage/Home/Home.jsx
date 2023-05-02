@@ -2,6 +2,7 @@ import './Home.css';
 import Banner from '../../../assets/banner4.jpg';
 import { FaFacebookF, FaInstagram, FaTwitter, FaGlassCheers } from "react-icons/fa";
 import About from '../About/About';
+import ChefsCard from '../ChefsCard/ChefsCard';
 
 const Home = () => {
     return (
@@ -24,7 +25,9 @@ const Home = () => {
          
         </div>
          <About></About>
-         
+         <div className='my-4'>
+          <ChefsCard></ChefsCard>
+         </div>
         </>
     );
 };
