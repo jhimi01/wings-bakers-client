@@ -1,0 +1,200 @@
+{
+    "chefs": [
+      {
+        "chef_picture": "https://example.com/chef1.jpg",
+        "chef_name": "Maria Rodriguez",
+        "years_of_experience": 12,
+        "number_of_recipes": 85,
+        "likes": 7500,
+        "view_recipes_button": "https://example.com/chef1-recipes",
+        "work_experience": [
+          {
+            "position": "Executive Chef",
+            "company": "La Maison",
+            "start_year": 2015,
+            "end_year": 2021
+          },
+          {
+            "position": "Sous Chef",
+            "company": "Le Jardin",
+            "start_year": 2010,
+            "end_year": 2015
+          }
+        ],
+        "details": {
+          "specialty": "French cuisine",
+          "awards": ["James Beard Award for Best Chef: Southwest (2019)", "San Pellegrino World's 50 Best Restaurants (2018, 2019, 2020)"]
+        },
+        "recipes": [
+            {
+              "recipe_name": "Coq au Vin",
+              "ingredients": ["1 chicken, cut into pieces", "6 ounces bacon, chopped", "1 onion, chopped", "3 cloves garlic, minced", "1 bottle red wine"],
+              "cooking_method": "In a large Dutch oven, cook the bacon over medium heat until crispy. Remove the bacon and set aside. Add the chicken to the pot and cook until browned on all sides. Remove the chicken and set aside. Add the onion and garlic to the pot and cook until soft. Add the wine and bring to a simmer. Add the chicken and bacon back to the pot and simmer for 1-2 hours, until the chicken is tender. Serve with crusty bread.",
+              "rating": 4.5,
+              "favorite": false
+            },
+            {
+              "recipe_name": "Ratatouille",
+              "ingredients": ["1 onion, diced", "1 eggplant, diced", "1 zucchini, diced", "1 red bell pepper, diced", "1 can diced tomatoes"],
+              "cooking_method": "In a large pot, cook the onion until soft. Add the eggplant, zucchini, and bell pepper and cook until tender. Add the tomatoes and simmer for 20-30 minutes. Serve over rice or with crusty bread.",
+              "rating": 4.0,
+              "favorite": true
+            },
+            {
+              "recipe_name": "Crème Brûlée",
+              "ingredients": ["2 cups heavy cream", "6 egg yolks", "1/2 cup sugar", "1 teaspoon vanilla extract", "1/4 cup turbinado sugar"],
+              "cooking_method": "Preheat the oven to 325°F. In a large bowl, whisk together the cream, egg yolks, sugar, and vanilla extract. Pour the mixture into 6 ramekins. Place the ramekins in a large baking dish and fill the dish with hot water until it reaches halfway up the sides of the ramekins. Bake for 40-50 minutes, until the custards are set but still slightly jiggly in the center. Let cool to room temperature, then chill in the fridge for at least 2 hours. Sprinkle the turbinado sugar over the custards and use a kitchen torch to caramelize the sugar." ,
+              "rating": 4.0,
+              "favorite": true
+            }
+        ]
+      },
+      {
+        "chef_picture": "https://example.com/chef2.jpg",
+        "chef_name": "David Lee",
+        "years_of_experience": 8,
+        "number_of_recipes": 65,
+        "likes": 4300,
+        "view_recipes_button": "https://example.com/chef2-recipes",
+        "work_experience": [
+          {
+            "position": "Head Chef",
+            "company": "Sushi Bar",
+            "start_year": 2018,
+            "end_year": 2022
+          },
+          {
+            "position": "Sous Chef",
+            "company": "Asian Fusion",
+            "start_year": 2015,
+            "end_year": 2018
+          }
+        ],
+        "details": {
+          "specialty": "Japanese cuisine",
+          "awards": ["Michelin Star (2021)"]
+        },
+        "recipes": [
+            {
+              "recipe_name": "Coq au Vin",
+              "ingredients": ["1 chicken, cut into pieces", "6 ounces bacon, chopped", "1 onion, chopped", "3 cloves garlic, minced", "1 bottle red wine"],
+              "cooking_method": "In a large Dutch oven, cook the bacon over medium heat until crispy. Remove the bacon and set aside. Add the chicken to the pot and cook until browned on all sides. Remove the chicken and set aside. Add the onion and garlic to the pot and cook until soft. Add the wine and bring to a simmer. Add the chicken and bacon back to the pot and simmer for 1-2 hours, until the chicken is tender. Serve with crusty bread.",
+              "rating": 4.5,
+              "favorite": false
+            },
+            {
+              "recipe_name": "Ratatouille",
+              "ingredients": ["1 onion, diced", "1 eggplant, diced", "1 zucchini, diced", "1 red bell pepper, diced", "1 can diced tomatoes"],
+              "cooking_method": "In a large pot, cook the onion until soft. Add the eggplant, zucchini, and bell pepper and cook until tender. Add the tomatoes and simmer for 20-30 minutes. Serve over rice or with crusty bread.",
+              "rating": 4.0,
+              "favorite": true
+            },
+            {
+              "recipe_name": "Crème Brûlée",
+              "ingredients": ["2 cups heavy cream", "6 egg yolks", "1/2 cup sugar", "1 teaspoon vanilla extract", "1/4 cup turbinado sugar"],
+              "cooking_method": "Preheat the oven to 325°F. In a large bowl, whisk together the cream, egg yolks, sugar, and vanilla extract. Pour the mixture into 6 ramekins. Place the ramekins in a large baking dish and fill the dish with hot water until it reaches halfway up the sides of the ramekins. Bake for 40-50 minutes, until the custards are set but still slightly jiggly in the center. Let cool to room temperature, then chill in the fridge for at least 2 hours. Sprinkle the turbinado sugar over the custards and use a kitchen torch to caramelize the sugar." ,
+              "rating": 4.0,
+              "favorite": true
+            }
+        ]
+      },
+      {
+        "chef_picture": "https://example.com/chef3.jpg",
+        "chef_name": "Sophie Chen",
+        "years_of_experience": 15,
+        "number_of_recipes": 120,
+        "likes": 12000,
+        "view_recipes_button": "https://example.com/chef3-recipes",
+        "work_experience": [
+          {
+            "position": "Executive Chef",
+            "company": "Mandarin Palace",
+            "start_year": 2017,
+            "end_year": 2022
+          },
+          {
+            "position": "Sous Chef",
+            "company": "Lotus Garden",
+            "start_year": 2010,
+            "end_year": 2017
+          }
+        ],
+        "details": {
+          "specialty": "Chinese cuisine",
+          "awards": ["Asia's 50 Best Restaurants (2019, 2020, 2021)", "World Gourmet Summit Awards of Excellence (2018)"]
+        },
+        "recipes": [
+            {
+              "recipe_name": "Coq au Vin",
+              "ingredients": ["1 chicken, cut into pieces", "6 ounces bacon, chopped", "1 onion, chopped", "3 cloves garlic, minced", "1 bottle red wine"],
+              "cooking_method": "In a large Dutch oven, cook the bacon over medium heat until crispy. Remove the bacon and set aside. Add the chicken to the pot and cook until browned on all sides. Remove the chicken and set aside. Add the onion and garlic to the pot and cook until soft. Add the wine and bring to a simmer. Add the chicken and bacon back to the pot and simmer for 1-2 hours, until the chicken is tender. Serve with crusty bread.",
+              "rating": 4.5,
+              "favorite": false
+            },
+            {
+              "recipe_name": "Ratatouille",
+              "ingredients": ["1 onion, diced", "1 eggplant, diced", "1 zucchini, diced", "1 red bell pepper, diced", "1 can diced tomatoes"],
+              "cooking_method": "In a large pot, cook the onion until soft. Add the eggplant, zucchini, and bell pepper and cook until tender. Add the tomatoes and simmer for 20-30 minutes. Serve over rice or with crusty bread.",
+              "rating": 4.0,
+              "favorite": true
+            },
+            {
+              "recipe_name": "Crème Brûlée",
+              "ingredients": ["2 cups heavy cream", "6 egg yolks", "1/2 cup sugar", "1 teaspoon vanilla extract", "1/4 cup turbinado sugar"],
+              "cooking_method": "Preheat the oven to 325°F. In a large bowl, whisk together the cream, egg yolks, sugar, and vanilla extract. Pour the mixture into 6 ramekins. Place the ramekins in a large baking dish and fill the dish with hot water until it reaches halfway up the sides of the ramekins. Bake for 40-50 minutes, until the custards are set but still slightly jiggly in the center. Let cool to room temperature, then chill in the fridge for at least 2 hours. Sprinkle the turbinado sugar over the custards and use a kitchen torch to caramelize the sugar." ,
+              "rating": 4.0,
+              "favorite": true
+            }
+        ]
+      },
+      {
+        "chef_picture": "https://example.com/chef4.jpg",
+        "chef_name": "Jack Thompson",
+        "years_of_experience": 20,
+        "number_of_recipes": 200,
+        "likes": 18000,
+        "view_recipes_button": "https://example.com/chef4-recipes",
+        "work_experience": [
+            {
+                "position": "Executive Chef",
+                "company": "Mandarin Palace",
+                "start_year": 2017,
+                "end_year": 2022
+              },
+              {
+                "position": "Sous Chef",
+                "company": "Lotus Garden",
+                "start_year": 2010,
+                "end_year": 2017
+              }
+            ],
+            "details": {
+              "specialty": "Chinese cuisine",
+              "awards": ["Asia's 50 Best Restaurants (2019, 2020, 2021)", "World Gourmet Summit Awards of Excellence (2018)"]
+            },
+            "recipes": [
+                {
+                  "recipe_name": "Coq au Vin",
+                  "ingredients": ["1 chicken, cut into pieces", "6 ounces bacon, chopped", "1 onion, chopped", "3 cloves garlic, minced", "1 bottle red wine"],
+                  "cooking_method": "In a large Dutch oven, cook the bacon over medium heat until crispy. Remove the bacon and set aside. Add the chicken to the pot and cook until browned on all sides. Remove the chicken and set aside. Add the onion and garlic to the pot and cook until soft. Add the wine and bring to a simmer. Add the chicken and bacon back to the pot and simmer for 1-2 hours, until the chicken is tender. Serve with crusty bread.",
+                  "rating": 4.5,
+                  "favorite": false
+                },
+                {
+                  "recipe_name": "Ratatouille",
+                  "ingredients": ["1 onion, diced", "1 eggplant, diced", "1 zucchini, diced", "1 red bell pepper, diced", "1 can diced tomatoes"],
+                  "cooking_method": "In a large pot, cook the onion until soft. Add the eggplant, zucchini, and bell pepper and cook until tender. Add the tomatoes and simmer for 20-30 minutes. Serve over rice or with crusty bread.",
+                  "rating": 4.0,
+                  "favorite": true
+                },
+                {
+                  "recipe_name": "Crème Brûlée",
+                  "ingredients": ["2 cups heavy cream", "6 egg yolks", "1/2 cup sugar", "1 teaspoon vanilla extract", "1/4 cup turbinado sugar"],
+                  "cooking_method": "Preheat the oven to 325°F. In a large bowl, whisk together the cream, egg yolks, sugar, and vanilla extract. Pour the mixture into 6 ramekins. Place the ramekins in a large baking dish and fill the dish with hot water until it reaches halfway up the sides of the ramekins. Bake for 40-50 minutes, until the custards are set but still slightly jiggly in the center. Let cool to room temperature, then chill in the fridge for at least 2 hours. Sprinkle the turbinado sugar over the custards and use a kitchen torch to caramelize the sugar." ,
+                  "rating": 4.0,
+                  "favorite": true
+                }
+            ]
+          }
+        ]
+    }

@@ -7,6 +7,7 @@ const NavogationBar = () => {
 
   const { user,logOut } = useContext(AuthContext);
   console.log(user)
+ 
 
   const handlelogOut=(e) => {
     e.preventDefault();
@@ -16,6 +17,8 @@ const NavogationBar = () => {
       console.log(error.message);
     })
   };
+
+  
 
     return (
         
@@ -45,7 +48,7 @@ const NavogationBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        {user?.photoURL && <img className="rounded-full w-12 h-12 mr-3" src={user.photoURL} />}
+        {user?.photoURL && <img className={`rounded-full w-12 h-12 mr-3 `} src={user.photoURL} />}
          {user ? <button className='bg-white py-2 px-5 text-xl flex items-center text-gray-600' onClick={handlelogOut} >LogOut</button> : <Link to='/login'>
          <button
          className='bg-white py-2 px-5 text-xl flex items-center text-gray-600'>Login</button>
