@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import "@smastrom/react-rating/style.css";
 
@@ -60,6 +61,18 @@ const ViewRecipe = () => {
 
          <RecipeDetails key={index} recipe={recipe}></RecipeDetails>
         ))}
+        <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
       </div>
     </>
   );
