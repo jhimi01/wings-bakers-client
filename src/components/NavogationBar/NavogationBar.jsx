@@ -30,7 +30,6 @@ const NavogationBar = () => {
             </label>
             <ul tabIndex={0} className="menu gap-3 menu-compact  dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
             <Link to='/blog'>Blog</Link>
 
             </ul>
@@ -43,7 +42,7 @@ const NavogationBar = () => {
           <ul className="menu text-white menu-horizontal text-xl gap-3 px-1">
           {/* <Navigate to='/' className={({ isActive }) => isActive ? "active" : ""}>Home</Navigate> */}
           <NavLink to='/home' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>Home</NavLink>
-            <NavLink to='/about' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>About</NavLink>
+           
             <NavLink to='/blog' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>Blog</NavLink>
           </ul>
         </div>

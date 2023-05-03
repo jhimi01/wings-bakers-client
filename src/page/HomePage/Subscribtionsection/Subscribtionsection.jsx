@@ -20,7 +20,7 @@ const Subscribtionsection = () => {
               Subscribe to our newsletter
             </h2>
             <p className="mt-4 text-xl text-white">
-              Get updates on new products, sales, and special offers.
+              Get updates on new chefs and special offers.
             </p>
             <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
               <label htmlFor="email" className="sr-only">

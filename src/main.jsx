@@ -15,11 +15,13 @@ import Blog from './page/Blog/Blog';
 import Main from './Main/Main';
 import ViewRecipe from './page/ViewRecipe/ViewRecipe';
 import PrivateRoutes from './routes/PrivateRoutes';
+import ErrorPage from './page/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <LoginLAyout></LoginLAyout>,
+    
     children: [
       {
         path: '/',
@@ -37,6 +39,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
 {
   path: '/home',
@@ -52,6 +55,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '*',
+    element: <ErrorPage></ErrorPage>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,4 +1,18 @@
+import { FaCloudDownloadAlt } from "react-icons/fa";
+// import { PDFDownloadLink, PDFViewer} from '@react-pdf/renderer';
+import PDF from "../../PDF/PDF";
+
+
+
 const Blog = () => {
+
+
+
+  const handlePDF =()=>{
+  console.log('pdf download');
+  }
+
+
   return (
     <div className="container mx-auto p-5">
 
@@ -18,7 +32,6 @@ const Blog = () => {
 Controlled components, on the other hand, are form inputs that are fully controlled by React. The value of a controlled component is set and managed by React, rather than the browser. When the user interacts with a controlled component, React updates the value in its own state, and this state is then used to update the component. Controlled components provide a more predictable behavior, as you have full control over the state of the component.</p>
         </div>
       </div>
-
 
       <div
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
@@ -43,7 +56,6 @@ object : The prop should be an object. <br />
         </div>
       </div>
 
-
       <div
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
         tabIndex={0}
@@ -59,7 +71,6 @@ object : The prop should be an object. <br />
           </p>
         </div>
       </div>
-
 
       <div
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
@@ -77,6 +88,18 @@ object : The prop should be an object. <br />
         </div>
       </div>
 
+
+      {/* <PDFDownloadLink document={<PDF />} fileName="Blog.pdf">
+      Blog PDF
+    </PDFDownloadLink>
+    <PDFViewer>
+      <PDF />
+    </PDFViewer> */}
+
+
+      <div className="text-center my-10">
+ <button onClick={handlePDF} style={{background: '#111827'}} className="btn ">Download PDF <FaCloudDownloadAlt className="text-xl ml-2 "/></button>
+      </div>
 
     </div>
   );
