@@ -13,13 +13,13 @@ const Subscribtionsection = () => {
   
 
     return (
-        <div className="subscribtion py-8 my-5">
+        <div className="subscribtion py-8 mt-5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               Subscribe to our newsletter
             </h2>
-            <p className="mt-4 text-xl text-gray-600">
+            <p className="mt-4 text-xl text-white">
               Get updates on new products, sales, and special offers.
             </p>
             <form className="mt-8 sm:flex" onSubmit={handleSubmit}>
@@ -38,12 +38,7 @@ const Subscribtionsection = () => {
                 placeholder="Enter your email"
               />
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  className="bg-gray-600 py-2 px-5 text-xl flex items-center text-white"
-                >
-                  Subscribe
-                </button>
+    <button className='bg-gray-900 py-2 px-5 text-xl flex items-center text-white'>Subscribe</button>
                 {/* bg-white py-2 px-5 text-xl flex items-center text-gray-600 */}
               </div>
             </form>
