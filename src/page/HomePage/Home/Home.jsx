@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaGlassCheers } from "react-icons/
 import About from '../About/About';
 import ChefsCard from '../ChefsCard/ChefsCard';
 import Subscribtionsection from '../../../components/Subscribtionsection/Subscribtionsection';
+import ContactForm from '../../../components/ContactForm/ContactForm';
 
 const Home = () => {
     return (
@@ -31,6 +32,9 @@ const Home = () => {
          </div>
          <div>
           <Subscribtionsection></Subscribtionsection>
+         </div>
+         <div>
+          <ContactForm></ContactForm>
          </div>
         </>
     );
