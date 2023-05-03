@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const ViewRecipe = () => {
     const { id } = useParams();
@@ -11,7 +13,6 @@ const ViewRecipe = () => {
     const { chef_name, chef_picture, years_of_experience, number_of_recipes, likes, details, recipes } =item;
 
     const [showFullMethod, setShowFullMethod] = useState(false);
-    // const cookingMethod = showFullMethod ? recipe.cooking_method : recipe.cooking_method.substring(0, 100) + '...';
 
     const handleShow=()=>{
         setShowFullMethod(!showFullMethod)
@@ -47,13 +48,22 @@ const ViewRecipe = () => {
   <div className="card-body">
     <h2 className="card-title text-2xl font-bold">{recipe.recipe_name}</h2>
    <ol>
+   <h2 className='font-semibold text-xl'>Ingredients :</h2>
    {recipe.ingredients.map((ingred, index) => <li className='text-lg'>{index + 1}| {ingred}</li>)}
    </ol>
-   <p>
-    Cooking Method: <span>{recipe.cooking_method.length < 150 ? recipe.cooking_method :  recipe.cooking_method.substring(0, 100) + '...'}</span>
+   <hr />
+   <p className='text-lg font-bold'>
+    Cooking Method: <span className='text-lg font-normal'>{recipe.cooking_method.length < 150 ? recipe.cooking_method :  recipe.cooking_method.substring(0, 100) + '...'}</span>
 <span onClick={handleShow}>{showFullMethod?'seeLess':'seeMore'}</span>
   </p>
-  <p>Ratings: {recipe.rating}</p>
+
+  {/* rating star */}
+  
+
+  <div className='flex items-center gap-2'>
+  <Rating style={{ maxWidth: 100 }} value={recipe.rating} readOnly/>
+  <p className='font-bold'>{recipe.rating}</p>
+  </div>
     <div className="card-actions mt-3">
     <button className='bg-gray-600 py-2 px-5 text-xl flex items-center text-white'>Favroite <FaHeart /></button>
     </div>

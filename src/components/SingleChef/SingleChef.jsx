@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const SingleChef = ({chef}) => {
     const {chef_name, chef_picture, years_of_experience, number_of_recipes, likes, id} =chef;
+    
     return (
       <div style={{borderRadius: 0}} className="card md:h-56 lg:card-side bg-orange-50 text-gray-600 shadow-xl">
       <figure><img src={chef_picture} className="md:w-44 md:h-full h-52 object-cover w-full" alt="Album"/></figure>
