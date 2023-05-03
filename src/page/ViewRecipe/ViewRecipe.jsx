@@ -7,6 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ViewRecipe = () => {
+    
+    const [buttonClicked, setButtonClicked] = useState(false);
   const { id } = useParams();
   const detailschef = useLoaderData();
 
@@ -29,8 +31,11 @@ const ViewRecipe = () => {
   };
 
   const handleFevToast = () => {
-    toast("added to Fevorite!");
+      setButtonClicked(true);
+      toast("added to Fevorite!");
   };
+
+
 
   return (
     <>
@@ -87,9 +92,7 @@ const ViewRecipe = () => {
                   {showFullMethod ? "seeLess" : "seeMore"}
                 </span>
               </p>
-
               {/* rating star */}
-
               <div className="flex items-center gap-2">
                 <Rating
                   style={{ maxWidth: 100 }}
@@ -99,12 +102,13 @@ const ViewRecipe = () => {
                 <p className="font-bold">{recipe.rating}</p>
               </div>
               <div className="card-actions mt-3">
-                <button
-                  onClick={handleFevToast}
-                  className="bg-gray-600 py-2 px-5 text-xl flex items-center text-white"
-                >
-                  Favroite <FaHeart />
-                </button>
+              <button
+  onClick={handleFevToast} disabled={buttonClicked}
+  className={`${buttonClicked ? 'bg-gray-500' : 'bg-gray-700'} py-2 px-5 text-xl flex items-center text-white`}
+>
+  Favorite <FaHeart />
+</button>
+
                 <ToastContainer
                   position="top-center"
                   autoClose={5000}
@@ -127,6 +131,3 @@ const ViewRecipe = () => {
 };
 
 export default ViewRecipe;
-
-// <span>{recipe.cooking_method.length < 150 ? recipe.cooking_method :  recipe.cooking_method.substring(0, 100) + '...'}</span>
-/* <span onClick={handleShow}>{showFullMethod?'seeLess':'seeMore'}</span> */

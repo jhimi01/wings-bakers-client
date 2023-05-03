@@ -3,8 +3,8 @@ import Banner from '../../../assets/banner4.jpg';
 import { FaFacebookF, FaInstagram, FaTwitter, FaGlassCheers } from "react-icons/fa";
 import About from '../About/About';
 import ChefsCard from '../ChefsCard/ChefsCard';
-import Subscribtionsection from '../../../components/Subscribtionsection/Subscribtionsection';
-import ContactForm from '../../../components/ContactForm/ContactForm';
+import Subscribtionsection from '../Subscribtionsection/Subscribtionsection';
+import ContactForm from '../ContactForm/ContactForm';
 
 const Home = () => {
     return (
