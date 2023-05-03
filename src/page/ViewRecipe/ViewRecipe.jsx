@@ -53,6 +53,7 @@ const ViewRecipe = () => {
     Cooking Method: <span>{recipe.cooking_method.length < 150 ? recipe.cooking_method :  recipe.cooking_method.substring(0, 100) + '...'}</span>
 <span onClick={handleShow}>{showFullMethod?'seeLess':'seeMore'}</span>
   </p>
+  <p>Ratings: {recipe.rating}</p>
     <div className="card-actions mt-3">
     <button className='bg-gray-600 py-2 px-5 text-xl flex items-center text-white'>Favroite <FaHeart /></button>
     </div>
