@@ -26,7 +26,7 @@ const Register = () => {
         console.log(register)
         setError('')
         setSucces('succesfully registered')
-        navigate('/login')
+        navigate(from, { replace: true })
       }).catch((err) => {
         console.log(err)
         setError(err.message)
@@ -94,12 +94,12 @@ const Register = () => {
           
         </div>
   
-        <div className="button-group text-center">
+        {succes && <p style={{color: 'green'}}>{succes}</p>}
+        {error && <p style={{color: 'red'}}>{error}</p>}
+        <div className="button-group text-center mt-3">
           <button type="submit" className="register-button ">Register</button>
           <p className='my-4'>Do you already have an account? <Link to='/login' className='text-blue-700 underline'>Login</Link></p>
         </div>
-        {succes && <p style={{color: 'green'}}>{succes}</p>}
-        {error && <p style={{color: 'green'}}>{error}</p>}
         <div className="divider">OR</div>
   
         <div className="oauth-group flex flex-col gap-4">
