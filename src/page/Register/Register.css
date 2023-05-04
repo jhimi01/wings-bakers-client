@@ -53,3 +53,14 @@
     background-color: #f8f8f8;
   }
   
+
+  @media only screen and (max-width: 768px) {
+    .containeform{
+        max-width: 90%;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 5px;
+    }
+}

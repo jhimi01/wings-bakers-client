@@ -13,10 +13,6 @@ import ContactForm from "../ContactForm/ContactForm";
 import LazyLoad from 'react-lazy-load';
 
 const Home = () => {
- 
-  const hndlr =()=>{
-    console.log('fgsfdgfsd')
-  }
 
   return (
     <>
@@ -40,7 +36,7 @@ const Home = () => {
             </p>
             <div style={{cursor: 'pointer', zIndex:'10000000'}}>
             <a href="#chef">
-            <button onClick={hndlr}  className="bg-white py-2 px-5 text-xl flex items-center text-gray-600">
+            <button className="bg-white py-2 px-5 text-xl flex items-center text-gray-600">
               Chefs <FaGlassCheers className="ml-2" />
             </button>
             </a>

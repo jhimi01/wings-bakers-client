@@ -63,7 +63,7 @@ const Login = () => {
     }
     return (
         <>
-          <form className='w-1/2 mx-auto my-5' onSubmit={handlelogin}>
+          <form className='md:w-1/2 w-5/6 mx-auto my-5' onSubmit={handlelogin}>
         <h2 className="text-center text-3xl my-5">Please Login</h2>
            <div className="form-group">
           <label>Email:</label>

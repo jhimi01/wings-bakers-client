@@ -40,7 +40,7 @@ const NavogationBar = () => {
 
         {/* large page */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu text-white menu-horizontal text-xl gap-3 px-1">
+          <ul className="menu text-white menu-horizontal text-xl font-bold gap-3 px-1">
           {/* <Navigate to='/' className={({ isActive }) => isActive ? "active" : ""}>Home</Navigate> */}
           <NavLink to='/home' className={({ isActive}) => isActive ? "text-gray-800 bg-white px-2" : "" }>Home</NavLink>
            
