@@ -14,6 +14,9 @@ import LazyLoad from 'react-lazy-load';
 
 const Home = () => {
  
+  const hndlr =()=>{
+    console.log('fgsfdgfsd')
+  }
 
   return (
     <>
@@ -35,21 +38,25 @@ const Home = () => {
               healthy and balanced diet leads to weakness and deficiency
               diseases.
             </p>
-            <button className="bg-white py-2 px-5 text-xl flex items-center text-gray-600">
+            <div style={{cursor: 'pointer', zIndex:'10000000'}}>
+            <a href="#chef">
+            <button onClick={hndlr}  className="bg-white py-2 px-5 text-xl flex items-center text-gray-600">
               Chefs <FaGlassCheers className="ml-2" />
             </button>
+            </a>
+            </div>
           </div>
         </div>
         <div className="absolute right-11">
-          <FaFacebookF className="text-white mb-3 text-xl md:text-3xl cursor-pointer hover:text-gray-800" />
-          <FaInstagram className="text-white mb-3 text-xl md:text-3xl cursor-pointer hover:text-gray-800" />
-          <FaTwitter className="text-white text-xl md:text-3xl cursor-pointer hover:text-gray-800" />
+          <FaFacebookF className="text-white mb-3 text-xl md:text-3xl cursor-pointer hover:text-gray-500" />
+          <FaInstagram className="text-white mb-3 text-xl md:text-3xl cursor-pointer hover:text-gray-500" />
+          <FaTwitter className="text-white text-xl md:text-3xl cursor-pointer hover:text-gray-500" />
         </div>
+        
       </div>
       <About></About>
 
-
-        <div className="my-4">
+        <div id="chef" className="my-4">
           <ChefsCard />
         </div>
  

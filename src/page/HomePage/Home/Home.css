@@ -1,19 +1,19 @@
+*{scroll-behavior: smooth;}
 .banner{
     width: 100%;
     height: 95vh;
    position: relative;
-   margin-top: -70px;
-   z-index: -2;
+   margin-top: -100px;
+   z-index: 0;
 }
 
 .banner .overLay{
-    /* position: absolute; */
-    /* width: 50%; */
      background-color: rgba(0, 0, 0, 0.705);
-     z-index: 999;
+     z-index: 1;
      margin: auto 0;
      padding: 20px;
 }
+
 
 .LazyLoad {
     opacity: 0;
