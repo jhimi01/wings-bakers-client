@@ -11,7 +11,7 @@ const PrivateRoutes = ({ children }) => {
     if (loader) {
 
 
-      return <SkeletonTheme baseColor="#f0f8ff7e" height="200" highlightColor="#f0f8ff7e" ><div className="grid md:grid-cols-2 mt-4 mx-4 md:gap-10 gap-3 grid-cols-1">
+      return <SkeletonTheme baseColor="#f0f8ff7e" height="200" highlightColor="#f0f8ff7e" ><div className="grid md:grid-cols-2 mt-4 mx-10 md:gap-10 gap-3 grid-cols-1">
       <div className="col-span-1">
         <Skeleton height={350} />
       </div>
