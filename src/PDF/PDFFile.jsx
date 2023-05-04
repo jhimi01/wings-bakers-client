@@ -1,6 +1,6 @@
 import React from "react";
 import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
-import LebronStretch from "../../src/assets/banner.jpg";
+// import LebronStretch from "../../src/assets/banner.jpg";
 
 const styles = StyleSheet.create({
   body: {
@@ -11,6 +11,22 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     textAlign: "center",
+    color: "blue",
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  subtitle: {
+    fontSize: 18,
+    textAlign: "left",
+    color: "black",
+    textDecoration: "underline",
+    marginTop: 20,
+  },
+  paragraph: {
+    fontSize: 14,
+    textAlign: "justify",
+    color: "grey",
+    lineHeight: 1.5,
   },
   text: {
     margin: 12,
@@ -43,66 +59,49 @@ const PDFFile = () => {
   return (
     <Document>
       <Page style={styles.body}>
-        <Text style={styles.header} fixed></Text>
-        <Image style={styles.image} src={LebronStretch} />
-        <Text style={styles.text}>
-          Oh right. I forgot about the battle. Wow, you got that off the
-          Internet? In my day, the Internet was only used to download
-          pornography. I don't know what you did, Fry, but once again, you
-          screwed up! Now all the planets are gonna start cracking wise about
-          our mamas. She also liked to shut up! We'll go deliver this crate like
-          professionals, and then we'll go home. In your time, yes, but nowadays
-          shut up! Besides, these are adult stemcells, harvested from perfectly
-          healthy adults whom I killed for their stemcells. And I'm his friend
-          Jesus. Incidentally, you have a dime up your nose. Oh, you're a dollar
-          naughtier than most. Bender, being God isn't easy. If you do too much,
-          people get dependent on you, and if you do nothing, they lose hope.
-          You have to use a light touch. Like a safecracker, or a pickpocket.
-          And why did 'I' have to take a cab? Perhaps, but perhaps your
-          civilization is merely the sewer of an even greater society above you!
-          Why would a robot need to drink? Stop! Don't shoot fire stick in space
-          canoe! Cause explosive decompression! I'm sure those windmills will
-          keep them cool. No! I want to live! There are still too many things I
-          don't own! Now that the, uh, garbage ball is in space, Doctor, perhaps
-          you can help me with my sexual inhibitions? I feel like I was mauled
-          by Jesus. Anyhoo, your net-suits will allow you to experience Fry's
-          worm infested bowels as if you were actually wriggling through them.
-          Bender, I didn't know you liked cooking. That's so cute. Who am I
-          making this out to? Aww, it's true. I've been hiding it for so long.
-          Are you crazy? I can't swallow that. Bite my shiny metal ass. Leela's
-          gonna kill me. You know, I was God once. There, now he's trapped in a
-          book I wrote: a crummy world of plot holes and spelling errors! Yes!
-          In your face, Gandhi! This is the worst kind of discrimination: the
-          kind against me! No, I'm Santa Claus! You are the last hope of the
-          universe. I am the man with no name, Zapp Brannigan! Why would I want
-          to know that? I guess if you want children beaten, you have to do it
-          yourself. Oh, I think we should just stay friends. No, just a regular
-          mistake. I'm Santa Claus! And then the battle's not so bad? I daresay
-          that Fry has discovered the smelliest object in the known universe!
-          No! The kind with looting and maybe starting a few fires! Bender, quit
-          destroying the universe! So, how 'bout them Knicks? Yes! In your face,
-          Gandhi! For one beautiful night I knew what it was like to be a
-          grandmother. Subjugated, yet honored. Bite my shiny metal ass. You
-          know the worst thing about being a slave? They make you work, but they
-          don't pay you or let you go. There's no part of that sentence I didn't
-          like! And when we woke up, we had these bodies. Oh sure! Blame the
-          wizards! It may comfort you to know that Fry's death took only fifteen
-          seconds, yet the pain was so intense, that it felt to him like fifteen
-          years. And it goes without saying, it caused him to empty his bowels.
-          You guys aren't Santa! You're not even robots. How dare you lie in
-          front of Jesus? Hey, whatcha watching? No, I'm Santa Claus! If rubbin'
-          frozen dirt in your crotch is wrong, hey I don't wanna be right. Oh,
-          you're a dollar naughtier than most. Then we'll go with that data
-          file! Fry, we have a crate to deliver. And why did 'I' have to take a
-          cab? I guess if you want children beaten, you have to do it yourself.
-          Say it in Russian! Anyhoo, your net-suits will allow you to experience
-          Fry's worm infested bowels as if you were actually wriggling through
-          them. And I'm his friend Jesus. Now what? Your best is an idiot! Quite
-          possible. We live long and are celebrated poopers. Switzerland is
-          small and neutral! We are more like Germany, ambitious and
-          misunderstood! I guess because my parents keep telling me to be more
-          ladylike. As though! You know the worst thing about being a slave?
-          They make you work, but they don't pay you or let you go.
+      <Text style={styles.header} fixed></Text>
+        {/* <Image style={styles.image} src={LebronStretch} /> */}
+        <Text style={styles.title}>Blog document</Text>
+        <Text style={styles.subtitle}>Differences between uncontrolled and controlled components?</Text>
+        <Text style={styles.paragraph}>
+        Uncontrolled components are form inputs that are handled by the DOM.
+          In other words, their values are not controlled by React, but by the
+          browser. The value of an uncontrolled component is set by the user
+          input directly on the DOM, and to retrieve the value, you need to
+          query the DOM using JavaScript. Uncontrolled components are easier to
+          set up and manage, but they can lead to unpredictable behavior because
+          the state of the component is not managed by React.
+          <br /> <br />
+          Controlled components, on the other hand, are form inputs that are
+          fully controlled by React. The value of a controlled component is set
+          and managed by React, rather than the browser. When the user interacts
+          with a controlled component, React updates the value in its own state,
+          and this state is then used to update the component. Controlled
+          components provide a more predictable behavior, as you have full
+          control over the state of the component.
+        </Text>
+        <Text style={styles.subtitle}>How to validate React props using PropTypes?</Text>
+        <Text style={styles.paragraph}>
+        There are many types of Prop Validation. <br />
+          any : The prop can be of any data type. <br />
+bool : The prop should be a Boolean. <br />
+number : The prop should be a number.   <br />
+string : The prop should be a string. <br />
+func : The prop should be a function. <br />
+array : The prop should be an array. <br />
+object : The prop should be an object. <br />
+<br />
+ PropTypes is a built-in library in React that allows you to specify the type and shape of props that a component should receive. This helps you catch errors early by validating the props that are being passed to a component at runtime.
+        </Text>
+        <Text style={styles.subtitle}> Difference between nodejs and express js.?</Text>
+        <Text style={styles.paragraph}>
+        Node.js provides a JavaScript runtime that can be used to build server-side applications.Node.js provides a set of core modules that can be used to build server-side applications.Node.js can be used to build any type of server-side application, including web, mobile, and desktop applications.Node.js is low-level and requires more configuration to build a complete application. <br /> <br />
+          Express.js is a web application framework that provides additional features to simplify the process of building web applications on top of Node.js.Express.js, on the other hand, provides additional features such as routing, middleware, and templating.Express.js, however, is primarily used for building web applications.Express.js provides an abstraction layer on top of Node.js, making it easier to build web applications.
+        </Text>
+        <Text style={styles.subtitle}>  What is a custom hook, and why will you create a custom hook??</Text>
+        <Text style={styles.paragraph}>
+        In React, a custom hook is a JavaScript function that uses React hooks (such as useState, useEffect, useContext, etc.) to provide a certain behavior or functionality that can be shared across multiple components. Custom hooks allow developers to extract reusable logic from components and promote code reuse and maintainability. <br />
+          Custom hooks can be created to handle various tasks, such as managing form state, implementing infinite scrolling, fetching data from an API, or handling authentication. By creating a custom hook, you can encapsulate complex logic into a reusable function and make it available to multiple components without repeating the same code over and over again.
         </Text>
         <Text
           style={styles.pageNumber}
