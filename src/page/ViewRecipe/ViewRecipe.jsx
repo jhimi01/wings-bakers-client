@@ -30,7 +30,7 @@ const ViewRecipe = () => {
   return (
     <>
       <div className="grid bg-slate-600 md:grid-cols-2 grid-cols-1 gap-6 px-9 mt-3">
-        <div className="w-full overflow-hidden">
+        <div className="w-full h-full overflow-hidden flex items-center justify-center">
           <figure>
             <img src={chef_picture} alt="chef picture" />
           </figure>
