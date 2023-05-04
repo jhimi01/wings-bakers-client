@@ -1,17 +1,12 @@
 import React from "react";
-// import ReactDOM from "react-dom";
-// const ref = React.createRef();
-// import { FaCloudDownloadAlt } from "react-icons/fa";
-// import ReactToPdf from "react-to-pdf";
-// import PDF from "../../PDF/PDF";
-
-
-
+const ref = React.createRef();
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import PDF from "../../PDF/PDF";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import PDFFile from './../../PDF/PDFFile';
 const Blog = () => {
-
   return (
     <div className="container mx-auto p-5">
-
       <div
         tabIndex={0}
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
@@ -28,7 +23,6 @@ const Blog = () => {
 Controlled components, on the other hand, are form inputs that are fully controlled by React. The value of a controlled component is set and managed by React, rather than the browser. When the user interacts with a controlled component, React updates the value in its own state, and this state is then used to update the component. Controlled components provide a more predictable behavior, as you have full control over the state of the component.</p>
         </div>
       </div>
-
       <div
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
         tabIndex={0}
@@ -51,7 +45,6 @@ object : The prop should be an object. <br />
  PropTypes is a built-in library in React that allows you to specify the type and shape of props that a component should receive. This helps you catch errors early by validating the props that are being passed to a component at runtime.</p>
         </div>
       </div>
-
       <div
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
         tabIndex={0}
@@ -67,7 +60,6 @@ object : The prop should be an object. <br />
           </p>
         </div>
       </div>
-
       <div
         style={{borderRadius: 0, border: '1px solid #95afc0'}}
         tabIndex={0}
@@ -83,52 +75,16 @@ object : The prop should be an object. <br />
           </p>
         </div>
       </div>
+      <div className="text-center my-10">
+    <PDFDownloadLink document={<PDFFile />} filename="document">
+      {({loading}) => (loading ? <button style={{background: '#111827'}} className="btn ">Loading....... <FaCloudDownloadAlt className="text-xl ml-2 "/></button> : <button style={{background: '#111827'}} className="btn ">Download PDF <FaCloudDownloadAlt className="text-xl ml-2 "/></button> )}
+      </PDFDownloadLink>
+ </div>
+ <div>
 
-{/*      
-      <ReactToPdf targetRef={ref} filename="blog.pdf">
-        {({toPdf}) => (
-          <div className="text-center my-10">
- <button onClick={toPdf} style={{background: '#111827'}} className="btn ">Download PDF <FaCloudDownloadAlt className="text-xl ml-2 "/></button>
-      </div>
-        )}
-    </ReactToPdf>
-    <div ref={ref}>
-       <PDF></PDF>
-      </div> */}
+      
+ </div>
     </div>
-  );
+  )
 };
-
-
 export default Blog;
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import Pdf from "react-to-pdf";
-
-
-// const ref = React.createRef();
-
-// const Blog = () =>{
-//   return (
-//     <div className="App">
-//       <Pdf targetRef={ref} filename="code-example.pdf">
-//         {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-//       </Pdf>
-//       <div ref={ref}>
-//         <h1>Hello CodeSandbox</h1>
-//         <h2>Start editing to see some magic happen!</h2>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Blog;
