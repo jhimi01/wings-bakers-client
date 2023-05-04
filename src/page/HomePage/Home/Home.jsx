@@ -10,18 +10,20 @@ import About from "../About/About";
 import ChefsCard from "../ChefsCard/ChefsCard";
 import Subscribtionsection from "../Subscribtionsection/Subscribtionsection";
 import ContactForm from "../ContactForm/ContactForm";
-
+import { useState } from "react";
 
 const Home = () => {
+ 
+
   return (
     <>
       <div className="banner flex justify-start items-center">
         {/* <LazyLoad effect="blur" height={600}> */}
-          <img
-            className="w-full h-full absolute object-cover"
-            src={Banner}
-            alt="Banner"
-          />
+        <img
+          className="w-full h-full absolute object-cover"
+          src={Banner}
+          alt="Banner"
+        />
         {/* </LazyLoad> */}
         <div className="overLay w-full h-96 md:w-2/3 absolute flex justify-center items-center text-white  px-4">
           <div className="my-4">
@@ -45,9 +47,13 @@ const Home = () => {
         </div>
       </div>
       <About></About>
-      <div className="my-4">
-        <ChefsCard/>
-      </div>
+
+
+        <div className="my-4">
+          <ChefsCard />
+        </div>
+ 
+
       <div>
         <Subscribtionsection></Subscribtionsection>
       </div>
