@@ -11,7 +11,7 @@ const ContactForm = () => {
       // Code to submit form goes here
     };
     return (
-        <div className="bg-gray-900 py-8">
+        <div className="bg-gray-900 py-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl">

@@ -9,3 +9,11 @@
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
 }
+.LazyLoad {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  
+  .is-visible {
+    opacity: 1;
+  }
