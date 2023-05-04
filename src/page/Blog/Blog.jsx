@@ -75,6 +75,10 @@ object : The prop should be an object. <br />
           </p>
         </div>
       </div>
+
+
+
+      
       <div className="text-center my-10">
     <PDFDownloadLink document={<PDFFile />} filename="document">
       {({loading}) => (loading ? <button style={{background: '#111827'}} className="btn ">Loading....... <FaCloudDownloadAlt className="text-xl ml-2 "/></button> : <button style={{background: '#111827'}} className="btn ">Download PDF <FaCloudDownloadAlt className="text-xl ml-2 "/></button> )}
