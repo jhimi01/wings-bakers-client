@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import './Subscribtion.css'
-import LazyLoad from 'react-lazy-load';
+import React, { useState } from "react";
+import "./Subscribtion.css";
+import LazyLoad from "react-lazy-load";
 
 const Subscribtionsection = () => {
+  const [email, setEmail] = useState("");
 
-    const [email, setEmail] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submitting email:", email);
+    // Code to submit email goes here
+  };
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log("Submitting email:", email);
-      // Code to submit email goes here
-    };
-  
-
-    return (
-<LazyLoad effect="blur">
-<div className="subscribtion py-8 mt-5">
+  return (
+    <LazyLoad effect="blur">
+      <div className="subscribtion py-8 mt-5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-300 sm:text-4xl">
@@ -40,18 +38,17 @@ const Subscribtionsection = () => {
                 placeholder="Enter your email"
               />
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-    <button className='bg-gray-900 py-2 px-5 text-xl flex items-center text-white'>Subscribe</button>
+                <button className="bg-gray-900 py-2 px-5 text-xl flex items-center text-white">
+                  Subscribe
+                </button>
                 {/* bg-white py-2 px-5 text-xl flex items-center text-gray-600 */}
               </div>
             </form>
           </div>
         </div>
       </div>
-        </LazyLoad>
-
-
-        
-    );
+    </LazyLoad>
+  );
 };
 
 export default Subscribtionsection;

@@ -52,7 +52,7 @@ const Home = () => {
       </div>
       <About></About>
 
-      <div className="mt-28">
+      <div className="mt-40">
         <Details />
       </div>
 
@@ -65,10 +65,10 @@ const Home = () => {
       </div>
 
       <div>
-        <Subscribtionsection></Subscribtionsection>
+        <Subscribtionsection />
       </div>
       <div>
-        <ContactForm></ContactForm>
+        <ContactForm />
       </div>
     </>
   );
