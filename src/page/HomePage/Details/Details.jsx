@@ -6,7 +6,7 @@ import menu from "../../../../public/menu.png";
 
 const Details = () => {
   return (
-    <div className="md:flex items-center gap-10 md:p-28 px-2">
+    <div className="md:flex items-center gap-10 md:px-28 pt-16 px-2">
       <div className="md:w-[60%]">
       <h1 className="text-3xl md:text-3xl font-semibold mb-5 text-yellow-50">Dear people, thank you for coming. The host will seat you shortly☺</h1>
       <div>
