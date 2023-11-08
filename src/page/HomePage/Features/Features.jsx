@@ -8,7 +8,7 @@ const Features = () => {
         <div className="relative">
       <div className="md:flex items-center justify-center gap-10 px-3 text-center md:w-3/4 w-full mx-auto md:mt-10 md:mb-20 my-10">
         <div
-          style={{ boxShadow: "15px 15px 30px 0px #f56918c5" }}
+          style={{ boxShadow: "6px 6px 30px 0px #f3d9983e" }}
           className="border group rounded-lg hoverEffect hover:text-white flex items-center px-5 py-8 space-y-7 flex-col"
         >
           <h1 className="textBorder text-8xl font-bold group-hover:text-white">
@@ -21,13 +21,13 @@ const Features = () => {
             It is a long established fact that a reader will be distracted by
             the readable content of.
           </p>
-          <button className="text-xl btn rounded-md bg-[#ffbe76] text-white hover:bg-[#e08c68]">
+          <button className="text-xl rounded-none btn border-none bg-[#e08c68] text-white hover:bg-[#f2a17d]">
             Read More
           </button>
         </div>
 
         <div
-          style={{ boxShadow: "15px 15px 30px 0px #ffbe76" }}
+           style={{ boxShadow: "6px 6px 30px 0px #f3d9983e" }}
           className="bg-slate-900 rounded-lg flex items-center px-5 py-8 space-y-7 flex-col"
         >
           <h1 className="textBorder textBorder-middle text-9xl font-bold">
@@ -38,12 +38,12 @@ const Features = () => {
             It is a long established fact that a reader will be distracted by
             the readable content of.
           </p>
-          <button className="text-xl btn rounded-md text-[#ffbe76] bg-white hover:bg-[#e08c6800] hover:text-[#fff]">
+          <button className="text-xl rounded-none btn border-none text-[#ffbe76] bg-white hover:bg-[#e08c6800] hover:text-[#fff]">
             Read More
           </button>
         </div>
         <div
-          style={{ boxShadow: "15px 15px 30px 0px #f56918c5" }}
+            style={{ boxShadow: "6px 6px 30px 0px #f3d9983e" }}
           className="border group hoverEffect rounded-lg flex items-center px-5 py-8 space-y-7 flex-col"
         >
           <h1 className="textBorder text-8xl font-bold group-hover:text-white">
@@ -56,7 +56,7 @@ const Features = () => {
             It is a long established fact that a reader will be distracted by
             the readable content of.
           </p>
-          <button className="text-xl btn rounded-md bg-[#ffbe76] text-white hover:bg-[#e08c68]">
+          <button className="text-xl btn rounded-none border-none bg-[#e08c68] text-white hover:bg-[#f2a17d]">
             Read More
           </button>
         </div>
