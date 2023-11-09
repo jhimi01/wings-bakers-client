@@ -4,9 +4,9 @@ const Features = () => {
     return (
 
         <>
-          <h1 className="text-3xl md:text-5xl font-bold text-center mb-9 text-yellow-50">How we work</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-center mb-16 text-yellow-50">How we work</h1>
         <div className="relative">
-      <div className="md:flex items-center justify-center gap-10 px-3 text-center md:w-3/4 w-full mx-auto md:mt-10 md:mb-20 my-10">
+      <div className="md:flex items-center justify-center gap-10 px-3 text-center md:w-3/4 w-full mx-auto md:mt-10 md:mb-32 my-10">
         <div
           style={{ boxShadow: "6px 6px 30px 0px #f3d9983e" }}
           className="border group rounded-lg hoverEffect hover:text-white flex items-center px-5 py-8 space-y-7 flex-col"
